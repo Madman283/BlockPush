@@ -18,11 +18,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //Controls of player
-        /*float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        rig.velocity = new Vector3(horizontalInput * MSpeed, rig.velocity.y, verticalInput * MSpeed);*/
+        //The following establishes the inputs that give the player the ability to move
 
         if (Input.GetKey(KeyCode.D))
         {

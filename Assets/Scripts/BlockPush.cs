@@ -20,6 +20,8 @@ public class BlockPush : MonoBehaviour
     }
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
+        //The following allows the player to have the ability to push the rock
+
         Rigidbody rigidbody = hit.collider.attachedRigidbody;
 
         if (rigidbody != null)
