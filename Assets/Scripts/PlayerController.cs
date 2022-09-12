@@ -1,0 +1,69 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    Rigidbody rig;
+    //[SerializeField] float MSpeed = 6f;
+    [SerializeField] float speed;
+    [SerializeField] float JForce = 5f;
+    [SerializeField] Transform GCheck;
+    [SerializeField] LayerMask ground;
+    // Start is called before the first frame update
+    void Start()
+    {
+        rig = GetComponent<Rigidbody>();
+    }
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        //Controls of player
+        /*float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        rig.velocity = new Vector3(horizontalInput * MSpeed, rig.velocity.y, verticalInput * MSpeed);*/
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(Vector3.back * speed * Time.deltaTime);
+        }
+
+        
+    }
+
+    void Update()
+    {
+        //If the player is on ground he can jump
+        if (Input.GetButtonDown("Jump") && Grounded())
+        {
+            Jump();
+        }
+
+    }
+    void Jump()
+    {
+        //Allows player to jump
+        rig.velocity = new Vector3(rig.velocity.x, JForce, rig.velocity.z);       
+    }
+    
+    bool Grounded()
+    {
+        //checks if the player is on ground
+        return Physics.CheckSphere(GCheck.position, .1f, ground);
+    }
+
+
+}
