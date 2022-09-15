@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 189
     height: 1039
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 0
     width: 513
     height: 1307
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -502,9 +502,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.6413019, y: 79.396255, z: -30.56794}
+    m_Target: {x: -3.1975856, y: 15.562366, z: -19.48471}
     speed: 2
-    m_Value: {x: 3.6412365, y: 79.39615, z: -30.56787}
+    m_Value: {x: -3.1975925, y: 15.562375, z: -19.48474}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -551,9 +551,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.48678857, y: -0.022145782, z: 0.012074765, w: -0.8733228}
+    m_Target: {x: 0.15434141, y: 0.11748765, z: -0.01803493, w: 0.98099524}
     speed: 2
-    m_Value: {x: -0.48673505, y: -0.020832732, z: 0.011342912, w: -0.87322754}
+    m_Value: {x: 0.15284671, y: 0.11749686, z: -0.017855879, w: 0.98107773}
   m_Size:
     m_Target: 13.240099
     speed: 2
@@ -615,7 +615,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f2d9f7ff1afef7ff428cfaffa8f4fcffd4f5fcffc4fafcffaa9efeff9c9ffeff6237fffffc3dffff0e9dffff8ee1ffff38fbffffaa580000ec580000365900005c5a00004eab240058ab240060162700001c27002e1d2700961d2700
+      m_ExpandedIDs: ac23fbff7e8ffdff38fbffff16720000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -836,22 +836,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Apps\GithubDeskTop\GitHubWork\BlockPush
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 306a0000
-    m_LastClickedID: 27184
-    m_ExpandedIDs: 000000002e6a000000ca9a3b
+    m_SelectedIDs: fe6b0000
+    m_LastClickedID: 27646
+    m_ExpandedIDs: 00000000f46b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
