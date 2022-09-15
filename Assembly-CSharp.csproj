@@ -59,9 +59,9 @@
     <Compile Include="Assets\Scripts\FinishLine.cs" />
     <Compile Include="Assets\Scripts\BlockPush.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\AnimationStateController.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\End.cs" />
-    <Compile Include="Assets\Scripts\AnimationStateController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
