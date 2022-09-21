@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class AnimationStateController : MonoBehaviour
 {
+    PlayerController playerController;
     Animator animator;
     // Start is called before the first frame update
     void Start()
     {
+        playerController = GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
         
     }
@@ -30,6 +32,14 @@ public class AnimationStateController : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
 
+        if (playerController.collidingBox)
+        {
+            animator.SetBool("isPushing", true);
+        }
+        else
+        {
+            animator.SetBool("isPushing", false);
+        }
         
 
     }

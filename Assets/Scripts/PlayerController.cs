@@ -10,6 +10,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float JForce = 5f;
     [SerializeField] Transform GCheck;
     [SerializeField] LayerMask ground;
+    public bool collidingBox;
+    bool isJumping;
+    bool right;
+    bool left;
+    bool forward;
+    bool back;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,21 +26,29 @@ public class PlayerController : MonoBehaviour
     {
         //The following establishes the inputs that give the player the ability to move
 
-        if (Input.GetKey(KeyCode.D))
+        if (right)
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
+            right = false;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (left)
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
+            left = false;
         }
-        if (Input.GetKey(KeyCode.W))
+        if (forward)
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            forward = false;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (back)
         {
             transform.Translate(Vector3.back * speed * Time.deltaTime);
+            back = false;
+        }
+        if (isJumping)
+        {
+            Jump();
         }
 
         
@@ -42,23 +56,59 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+       
         //If the player is on ground he can jump
         if (Input.GetButtonDown("Jump") && Grounded())
         {
-            Jump();
+            isJumping = true;
+        }
+        
+        if (Input.GetKey(KeyCode.D))
+        {
+            right = true;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            left = true;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            forward = true;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            back = true;
         }
 
     }
     void Jump()
     {
         //Allows player to jump
-        rig.velocity = new Vector3(rig.velocity.x, JForce, rig.velocity.z);       
+        rig.AddForce(JForce * Vector3.up, ForceMode.Impulse);
+        isJumping = false;
+        
     }
     
     bool Grounded()
     {
         //checks if the player is on ground
         return Physics.CheckSphere(GCheck.position, .1f, ground);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("PushBox"))
+        {
+            collidingBox = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("PushBox"))
+        {
+            collidingBox = false;
+        }
     }
 
 
