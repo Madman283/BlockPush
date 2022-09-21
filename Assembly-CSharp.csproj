@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\End.cs" />
     <Compile Include="Assets\Scripts\Collector.cs" />
+    <Compile Include="Assets\Scripts\GrabbingSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
