@@ -37,6 +37,10 @@ public class PlayerController : MonoBehaviour
             transform.Translate(Vector3.back * speed * Time.deltaTime);
         }
 
+<<<<<<< HEAD
+=======
+        
+>>>>>>> parent of 2a32c0c (Added ability to pick up cube)
     }
 
     void Update()
