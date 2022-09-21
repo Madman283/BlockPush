@@ -16,7 +16,7 @@ public class Rotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Rotates the coins in a 360 loop
+        //Rotates the Apples in a 360 loop
         transform.Rotate(360 * speedX * Time.deltaTime, 360 * speedY * Time.deltaTime, 360 * speedZ * Time.deltaTime);
     }
 }
