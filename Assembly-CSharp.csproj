@@ -56,15 +56,22 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\PickableItem.cs" />
     <Compile Include="Assets\Scripts\FinishLine.cs" />
+    <Compile Include="Assets\Scripts\GrabItem.cs" />
+    <Compile Include="Assets\Scripts\PickUp.cs" />
     <Compile Include="Assets\Scripts\BlockPush.cs" />
+    <Compile Include="Assets\Scripts\ObjectGrabble.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\GrabbingSystem.cs" />
     <Compile Include="Assets\Scripts\AnimationStateController.cs" />
+    <Compile Include="Assets\HeadMovement.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\End.cs" />
+    <Compile Include="Assets\Scripts\PlayerPickupDrop.cs" />
     <Compile Include="Assets\Scripts\Collector.cs" />
+    <Compile Include="Assets\Scripts\SimpleGrabSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
