@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody rig;
+    //[SerializeField] Transform camT;
     //[SerializeField] float MSpeed = 6f;
     [SerializeField] float speed;
     [SerializeField] float JForce = 5f;
@@ -51,6 +52,9 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+
+        //Vector3 tempRotation = camT.rotation.eulerAngles;
+        //transform.rotation = Quaternion.Euler(0, tempRotation.y, 0);
 
     }
 
