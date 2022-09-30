@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float JForce = 5f;
     [SerializeField] Transform GCheck;
     [SerializeField] LayerMask ground;
+    public CharacterController controller;
     public bool collidingBox;
     bool isJumping;
     bool right;
@@ -78,6 +79,10 @@ public class PlayerController : MonoBehaviour
         {
             back = true;
         }
+
+        
+       
+
 
     }
     void Jump()

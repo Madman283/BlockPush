@@ -65,7 +65,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\GrabbingSystem.cs" />
     <Compile Include="Assets\Scripts\AnimationStateController.cs" />
-    <Compile Include="Assets\HeadMovement.cs" />
+    <Compile Include="Assets\Scripts\HeadMovement.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\End.cs" />
