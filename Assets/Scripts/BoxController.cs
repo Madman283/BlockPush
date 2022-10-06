@@ -8,7 +8,7 @@ public class BoxController : MonoBehaviour
 {
     [HideInInspector]
     public Rigidbody rb;
-    private FirstPersonController character;
+    private PlayerController character;
     [SerializeField]
     private bool held;
     private Collider col;
@@ -20,7 +20,7 @@ public class BoxController : MonoBehaviour
     {
         if (character == null)
         {
-            character = GameObject.Find("Player").GetComponent<FirstPersonController>();
+            character = GameObject.Find("Player").GetComponent<PlayerController>();
         }
 
         rb = GetComponent<Rigidbody>();
