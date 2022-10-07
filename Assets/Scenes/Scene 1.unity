@@ -4762,7 +4762,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324421727}
-  m_LocalRotation: {x: 0.28899446, y: 0.000000016472203, z: -0.000000004972551, w: 0.95733076}
+  m_LocalRotation: {x: 0.28899446, y: -0.000000016472194, z: 0.000000004972548, w: 0.95733076}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15007,7 +15007,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923670921}
-  m_LocalRotation: {x: 0.2540287, y: 0.000000025253993, z: -0.0000000066328174, w: 0.9671967}
+  m_LocalRotation: {x: 0.2540287, y: 0.000000025253994, z: -0.0000000066328183, w: 0.9671967}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17003,6 +17003,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 926bf470e984cf94e80b0f9bc7bd0fc9, type: 3}
   m_PrefabInstance: {fileID: 981308221}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &984436139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 984436140}
+  m_Layer: 0
+  m_Name: PlayerHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &984436140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984436139}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.0259, z: 0.0348}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1367682761}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &987628860
 GameObject:
   m_ObjectHideFlags: 0
@@ -23846,6 +23877,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1367682761 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7798667655086874750, guid: 2561c8e4592c31841b1451bcf71201c2, type: 3}
+  m_PrefabInstance: {fileID: 1562830674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1378837846
 PrefabInstance:
   m_ObjectHideFlags: 0

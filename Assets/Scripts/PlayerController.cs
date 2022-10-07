@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //public Gameobject playerHand;
+    //public Gameobject heldObject;
+    //public bool holdingSomething;
+
     Rigidbody rig;
     //[SerializeField] Transform camT;
     //[SerializeField] float MSpeed = 6f;
