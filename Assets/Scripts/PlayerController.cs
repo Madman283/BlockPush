@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     bool left;
     bool forward;
     bool back;
+    public bool holdingSomething;
+    public GameObject heldObject;
+    public GameObject playerHand;
     // Start is called before the first frame update
     void Start()
     {
@@ -122,6 +125,15 @@ public class PlayerController : MonoBehaviour
             collidingBox = false;
         }
     }
+
+    private Void TurnPlayer()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            this.transform.rotation = Quaternion.Euler(new Vector3(0, 30, 0) + transform.localRotation.eulerAngles);
+        }
+    }
+
 
 
 }
