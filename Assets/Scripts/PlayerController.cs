@@ -25,32 +25,34 @@ public class PlayerController : MonoBehaviour
     public bool holdingSomething;
     public GameObject heldObject;
     public GameObject playerHand;
+    public Camera cam;
     // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
     // Update is called once per frame
     void FixedUpdate()
     {
         //The following establishes the inputs that give the player the ability to move
 
-        if (right)
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
             right = false;
         }
-        if (left)
+        if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
             left = false;
         }
-        if (forward)
+        if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
             forward = false;
         }
-        if (back)
+        if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(Vector3.back * speed * Time.deltaTime);
             back = false;
@@ -59,6 +61,8 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+
+        TurnPlayer();
 
         //Vector3 tempRotation = camT.rotation.eulerAngles;
         //transform.rotation = Quaternion.Euler(0, tempRotation.y, 0);
@@ -73,23 +77,7 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = true;
         }
-        
-        if (Input.GetKey(KeyCode.D))
-        {
-            right = true;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            left = true;
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            forward = true;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            back = true;
-        }
+       
 
         
        
@@ -128,9 +116,15 @@ public class PlayerController : MonoBehaviour
 
     private void TurnPlayer()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        Vector3 forward = new Vector3(0, cam.transform.rotation.eulerAngles.y, 0);
+        this.transform.rotation = Quaternion.Euler( forward);
+    }
+
+    void UnlockMouse()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            this.transform.rotation = Quaternion.Euler(new Vector3(0, 30, 0) + transform.localRotation.eulerAngles);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
